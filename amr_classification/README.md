@@ -86,29 +86,6 @@ Replace `generate_mock_data()` in `demo/synthetic_example.py` with your own Data
 
 ---
 
-## Getting Started
-
-```bash
-git clone https://github.com/kanishkkadyan/amr-classification-ml.git
-cd amr-classification-ml
-pip install -r requirements.txt
-python demo/synthetic_example.py
-```
-
----
-
-## Design Decisions
-
-| Choice | Rationale |
-|---|---|
-| MLST-grouped CV | Prevents lineage leakage — standard in genomic epidemiology ML |
-| Inner-fold threshold tuning | Isolates threshold selection from outer evaluation |
-| Permutation importance | Model-agnostic; evaluated on held-out data only |
-| PR-AUC as importance scorer | More informative than accuracy under class imbalance |
-| `class_weight="balanced"` | Corrects for typical ~20–30% resistance prevalence |
-
----
-
 ## References
 
 - Weis, C. et al. (2022). Direct antimicrobial resistance prediction from clinical MALDI-TOF mass spectrometry. *Nature Medicine*, 28, 164–174.
